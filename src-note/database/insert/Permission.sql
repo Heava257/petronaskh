@@ -35,6 +35,18 @@ INSERT INTO user_roles (user_id,role_id) VALUES
 
 INSERT INTO permission	(name ,	`group`	,is_menu_web,	web_route_key	) VALUES
 
+  ("user.profile.get", "user", 1, "/profile"), -- Permission to fetch profile data
+  ("user.profile.update", "user", NULL, NULL), 
+
+("user.getlist","user",1,"/user"),
+("user.getone","user",NULL,NULL),
+("user.create","user",NULL,NULL),
+("user.update","user",NULL,NULL),
+("user.remove","user",NULL,NULL),
+
+
+
+
 ("dashboard.getlist","dashboard",1,"/"),
 ("invoices.getlist","invoices",1,"/invoices"),
 
@@ -123,13 +135,11 @@ INSERT INTO permission_roles (role_id, permission_id) VALUES
 --
 
 --Admin
-(3,46),
-(3,47),
-(3,48),
-(3,49),
-(3,50),
-(3,51),
-(3,52);
+(1,247),
+(1,248),
+(25,247),
+(25,248),
+
 
 
 

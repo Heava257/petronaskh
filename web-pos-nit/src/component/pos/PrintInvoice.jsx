@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../assets/CAMPTN.png";
 import "./fonts.css";
 import { getProfile } from "../../store/profile.store";
+import { formatDateClient } from "../../util/helper";
 
 const PrintInvoice = React.forwardRef((props, ref) => {
   const profile = getProfile();
@@ -74,8 +75,11 @@ const PrintInvoice = React.forwardRef((props, ref) => {
           <p className="khmer-text mt-2">
             ថ្ងៃប្រគល់ទំនិញ: {formatDate(objSummary.order_date)}
           </p>
-          <p className="khmer-text mt-2"> ថ្ងៃបញ្ជាទិញ:....../....../.....</p>
-          <p className="khmer-text mt-2">លេខបញ្ជាទិញ:...................</p>
+          <p className="khmer-text mt-2"> ថ្ងៃបញ្ជាទិញ: {formatDateClient(objSummary.order_date)}</p>
+          <p className="khmer-text mt-2">
+            លេខបញ្ជាទិញ: {`#SA-${objSummary.order_no}`}
+          </p>
+
           <p className="khmer-text mt-2">លេខបណ្ណបញ្ចេញទំនិញ:...................</p>
         </div>
       </div>

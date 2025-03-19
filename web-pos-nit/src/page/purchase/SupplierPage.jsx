@@ -283,6 +283,7 @@ function SupplierPage() {
     </Form>
 </Modal>
       <Table
+  rowClassName={() => "pos-row"}
   dataSource={state.list}
   columns={[
     {

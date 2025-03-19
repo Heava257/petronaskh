@@ -70,7 +70,12 @@ exports.getList = async (req, res) => {
       { label: "PETRONAS CAMBODIA CO., LTD", value: "petronas-cambodia-ltd", country: "Cambodia" }
     ];
     
-    const [expense_type] = await db.query("SELECT * FROM expense_type");
+    // const [expense_type] = await db.query("SELECT * FROM expense_type");
+
+    const [expense_type] = await db.query(
+      "select id as value, name as label from expense_type"
+    );
+
     const brand = [
       
         { label: "Petronas Cambodia", value: "petronas-cambodia", country: "Cambodia" },
